@@ -1,0 +1,118 @@
+range()= common for function
+List:[]
+1>enumerate() : index,element
+2>append(): can take only one argument.
+3>extend():
+4>insert(): insert at specific index
+5>pop(): pop out element from index
+6>remove():
+7>reverse():
+8>sort():==> lst.sort(reverse=True)
+9>copy(): eg lst3=lst2.copy()
+import copy
+lst4=copy.deepcopy(lst2)
+10>clear()
+print(dir(list))
+
+TUPLES:()
+
+1>result[0]=10 X tuples are not mutable
+2>del(result) YES<
+3>tuple(): toconvert from list to tuple
+
+
+DICTIONARY:
+keys are immutable
+as in function mutable
+keys and values can be of any datatype
+values can be duplicate
+case sensitive key elements
+{}
+keyvalue : Valuepair
+
+1>d.keys()
+2>keys=list(d.keys())
+3>d.values
+4>d['name']="vatsla" >>for assigning new key pair element
+5>d.items()
+6>del d["key"] ~>deletes specific key value
+7>d.get()
+8>d.update({'key':value})
+9>d.pop(key)
+10>d.popitem
+or
+for item;
+item=d.setdefault(key)
+print(item)
+11>dict.fromkeys(keys)
+12>append()
+
+
+NUMPY AND FUNCTION
+
+import numpy as np
+a=np.array([1.2,3])
+print(a)
+for i in range(len(a)):
+   print(a[i])
+print(a.ndim)
+a.shape
+a.size
+a.itemsize
+a.dtype
+a.nbytes
+print(a[1,2])
+a=np.arrange~~ arrange in nonmatrix form
+a.reshape(3,5)>>rows,columns
+a.resize((5,3))
+lin_arr=np.linspace(2,10,10,endpoint=True)
+lin_arr
+np.logspace
+np.zeros
+np.ones
+b=np.zeros_like(a,dtype=float)
+np.full((2,2),50) ~> 2X2 matrix
+np.identity
+np.eye
+f=a.flatter('F') >> multidimen to one dimen
+np.sum
+np.max
+np.abs
+np.argmax
+np.argmax(a,axis=0,1)
+vector stacking=== np.vstack
+2>>np.hstack((a,b))==arrange in matrixx form by concating inex[i]
+
+\np.where(condition)
+
+
+**FUNCTIONS
+addition=functionname(arg)
+>defadd_sub(x,y):
+return(x+y, x-y)
+a,s=add_sub(50,60)
+print(a,s)
+>>*args
+>>*kwargs
+kwargs.values
+
+
+defconcat_strings(x,y,**kwargs):
+sum=x+" "+y
+forarginkwargs.values():
+sum=sum+" "+argreturn(sum)
+
+concat_strings('hello','world',z='welcome')
+OUTPUT
+'hello world welcome'
+
+assgn
+print(i.rpartition(".")[2])
+d[m]=t.count(m)
+lst_tuple = list(zip(lst2,lst3))
+d = {"physics": 65, "Chemistry": 70, "Maths": 67, "Biology": 80} 
+l =[(k,v)for k,v in d.items()]
+l.reverse() 
+print(l)
+
+
