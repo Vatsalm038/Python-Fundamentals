@@ -1,0 +1,263 @@
+range()= common for function
+List:[]
+1>enumerate() : index,element
+2>append(): can take only one argument.
+3>extend():
+4>insert(): insert at specific index
+5>pop(): pop out element from index
+6>remove():
+7>reverse():
+8>sort():==> lst.sort(reverse=True)
+9>copy(): eg lst3=lst2.copy()
+import copy
+lst4=copy.deepcopy(lst2)
+10>clear()
+print(dir(list))
+
+TUPLES:()
+
+1>result[0]=10 X tuples are not mutable
+2>del(result) YES<
+3>tuple(): toconvert from list to tuple
+
+
+DICTIONARY:
+keys are immutable
+as in function mutable
+keys and values can be of any datatype
+values can be duplicate
+case sensitive key elements
+{}
+keyvalue : Valuepair
+
+1>d.keys()
+2>keys=list(d.keys())
+3>d.values
+4>d['name']="vatsla" >>for assigning new key pair element
+5>d.items()
+6>del d["key"] ~>deletes specific key value
+7>d.get()
+8>d.update({'key':value})
+9>d.pop(key)
+10>d.popitem
+or
+for item;
+item=d.setdefault(key)
+print(item)
+11>dict.fromkeys(keys)
+12>append()
+
+
+NUMPY AND FUNCTION
+
+import numpy as np
+a=np.array([1.2,3])
+print(a)
+for i in range(len(a)):
+   print(a[i])
+print(a.ndim)
+a.shape
+a.size
+a.itemsize
+a.dtype
+a.nbytes
+print(a[1,2])
+a=np.arrange~~ arrange in nonmatrix form
+a.reshape(3,5)>>rows,columns
+a.resize((5,3))
+lin_arr=np.linspace(2,10,10,endpoint=True)
+lin_arr
+np.logspace
+np.zeros
+np.ones
+b=np.zeros_like(a,dtype=float)
+np.full((2,2),50) ~> 2X2 matrix
+np.identity
+np.eye
+f=a.flatter('F') >> multidimen to one dimen
+np.sum
+np.max
+np.abs
+np.argmax
+np.argmax(a,axis=0,1)
+vector stacking=== np.vstack
+2>>np.hstack((a,b))==arrange in matrixx form by concating inex[i]
+
+\np.where(condition)
+
+
+**FUNCTIONS
+addition=functionname(arg)
+>defadd_sub(x,y):
+return(x+y, x-y)
+a,s=add_sub(50,60)
+print(a,s)
+>>*args
+>>*kwargs
+kwargs.values
+
+
+defconcat_strings(x,y,**kwargs):
+sum=x+" "+y
+forarginkwargs.values():
+sum=sum+" "+argreturn(sum)
+
+concat_strings('hello','world',z='welcome')
+OUTPUT
+'hello world welcome'
+
+assgn
+print(i.rpartition(".")[2])
+d[m]=t.count(m)
+lst_tuple = list(zip(lst2,lst3))
+d = {"physics": 65, "Chemistry": 70, "Maths": 67, "Biology": 80} 
+l =[(k,v)for k,v in d.items()]
+l.reverse() 
+print(l)
+
+
+
+from tkinter import*
+from tkinter import messagebox
+#from tkinter import Entry
+top=Tk()
+
+top.geometry("500x500")
+def sub():
+    messagebox.showinfo("Thankyou","Thanks for submitting")
+name=Label(top,text="Name").place(x=40,y=50)
+mobile_no=Label(top,text="Mobile num").place(x=40,y=100)
+gender=Label(top,text="Gender").place(x=40,y=150)
+email=Label(top,text="Email").place(x=40,y=200)
+password=Label(top,text="Password").place(x=40,y=250)
+e1=Entry(top).place(x=90,y=50)
+e2=Entry(top).place(x=110,y=100)
+male=Radiobutton(top,text='male',value="male").place(x=90,y=150)
+female=Radiobutton(top,text='female',value="female").place(x=180,y=150)
+e3=Entry(top).place(x=90,y=200)
+b=Button(top,text="Submit",command=sub).place(x=50,y=300)
+password= Entry(top,show="*").place(x=100,y=250)
+
+top.mainloop()
+
+
+
+from tkinter import *
+from tkinter import messagebox
+def myButton_click():
+ name = myTextbox.get()
+ #email=myTextbox1.get()
+ label_string ="welcome "+name
+ myLabel = Label(window, text=label_string)
+ myLabel.pack()
+ #if(int(email)>95):
+  #messagebox.showinfo("Hello","Distiction")
+def button_click():
+  exit()
+window = Tk()
+window.geometry("500x300")
+window.title("Main window")
+l1=Label(window,text="Enter your name")
+l1.pack()
+myTextbox = Entry(window,width = 30,borderwidth=3,fg='grey')
+myTextbox.pack()
+#l2=Label(window,text="Enter your marks")
+#l2.pack()
+#myTextbox1 = Entry(window,width = 30,borderwidth=3,fg='grey')
+#myTextbox1.pack()
+myButton = Button(window,text="Submit", command=myButton_click)
+myButton.pack()
+myButton2 = Button(window,text="exit", command=button_click)
+myButton2.pack()
+window.mainloop()
+
+label_string = "welcome "+name
+ myLabel = Label(window, text=label_string)
+ myLabel.pack()
+window = Tk()
+window.geometry("500x300")
+window.title("Main window")
+l1=Label(window,text="Enter your name")
+l1.pack()
+myTextbox = Entry(window,width = 30,borderwidth=3,fg='grey')
+myTextbox.pack()
+
+myButton = Button(window,text="Submit", command=myButton_click)
+myButton.pack()
+window.mainloop()
+
+rom tkinter import *
+from tkinter import messagebox
+def myButton_click():
+ name = myTextbox.get()
+ email=myTextbox1.get()
+ label_string =name+' '+email
+ myLabel = Label(window, text=label_string)
+ myLabel.pack()
+ if(int(email)>95):
+  messagebox.showinfo("Hello","Distiction")
+def button_click():
+  exit()
+window = Tk()
+window.geometry("500x300")
+window.title("Main window")
+l1=Label(window,text="Enter your name")
+l1.pack()
+myTextbox = Entry(window,width = 30,borderwidth=3,fg='grey')
+myTextbox.pack()
+l2=Label(window,text="Enter your marks")
+l2.pack()
+myTextbox1 = Entry(window,width = 30,borderwidth=3,fg='grey')
+myTextbox1.pack()
+myButton = Button(window,text="Submit", command=myButton_click)
+myButton.pack()
+myButton2 = Button(window,text="exit", command=button_click)
+myButton2.pack()
+window.mainloop()
+
+st = [] 
+lst1=[] 
+lst2=[] 
+lst3=[] 
+d={}
+n = int(input("Enter number of elements : "))
+for i in range(0, n):
+ ele = int(input("Enter the Roll No of Student:"))
+ ele1 = input("Enter the Name of Student:")
+ m1 = int(input("Enter the marks in python:"))
+ m2 = int(input("Enter the marks in ML:"))
+ lst.append(ele) 
+ lst2.append(m1) 
+ lst3.append(m2)
+ lst1.append(ele1)
+
+print(lst)
+print(lst1)
+lst_tuple = list(zip(lst2,lst3)) 
+print(lst_tuple)
+
+for i in range(0,n):
+ j = lst[i]
+ a =tuple(zip(lst1,lst_tuple)) 
+ d[j]=a[i]
+print(d)
+
+
+roll_n0=[]
+name=[]
+marks=[]
+record={}
+n=int(input("Enter the number of students"))
+for i in range(n):
+    roll_n0[i]=int(input("Enter the roll number"))
+    roll_n0.append()
+    name[i]=input("Enter the name of student")
+    name.append()
+    ml=int(input("Enter marks in ml"))
+    pyt=int(input("Enter marks in pyth"))
+    marks.append((ml,pyt))
+for i in range(n):
+    record[roll_n0[i]]=(name[i],marks[i])
+record
+
+
